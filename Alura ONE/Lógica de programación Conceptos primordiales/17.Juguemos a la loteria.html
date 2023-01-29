@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<h1>Juego de adivinación</h1>
+
+<script>
+
+	function saltarlinea() { 
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function imprimir(frase) { 
+
+		document.write(frase);
+		saltarlinea();
+
+	}
+
+    function sorteo (n) {
+
+       return Math.round(Math.random()*n);
+
+    }
+
+	var numerosistema = sorteo (50);
+    var numerolanzado = parseInt(prompt("Ingrese un número entre 0-50"));
+	
+    if (numerosistema == numerolanzado){
+
+        imprimir("Felicidades acerto")
+
+    }
+
+    else {
+
+        imprimir("Suerte para la proxima era el numero " + numerosistema)
+
+    }
+
+</script>

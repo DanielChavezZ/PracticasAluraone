@@ -1,0 +1,75 @@
+<meta charset="UTF-8">
+
+<h1>Juego de adivinación</h1>
+
+<input/>
+<button>Prueba tu suerte</button>
+
+
+<script>
+
+	function saltarlinea() { 
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function imprimir(frase) { 
+
+		document.write(frase);
+		saltarlinea();
+
+	}
+     
+    var input = document.querySelector("Input");
+    input.focus();
+	var numerosistema = Math.round(Math.random()*10);
+    var intentos = 3;
+    var contador = 1;
+
+	
+	function verificar(){
+        while(contador <= intentos ) {
+        
+            var input = parseInt("Ingrese un número entre 0-10");
+
+            if (parseInt(input.value) == numerosistema){
+
+            alert("Felicidades acerto en el intento " + contador + " el numero pensado era " + numerosistema);
+            break;
+
+        }
+
+        else {
+
+            alert("Suerte para la proxima")
+
+        }
+
+        contador++;
+    }
+
+        if (input.value == numerosistema){
+
+            imprimir("Felicidades acerto en el intento " + contador + " el numero pensado era " + numerosistema);
+            
+        }
+
+        else {
+
+            imprimir("Suerte para la proxima el numero pensado era " + numerosistema)
+
+            
+
+            }
+
+            input.value ="";
+            input.focus ();
+ }
+    var button = document.querySelector("button");
+    button.onclick = verificar;
+
+
+</script>

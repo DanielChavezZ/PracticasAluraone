@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+
+    if (edad < 18){
+        
+        imprimir("Lo siento aun no puedes conducir");
+
+}
+    if (edad > 18){
+
+        imprimir("Puedes conducir");
+
+    }
+
+    if (tieneLicencia == "S"){
+
+        imprimir("Felicidades puedes conducir")
+
+    }
+    if (tieneLicencia == "N"){
+
+        imprimir("Aun no estas capacitado para conducir")
+
+    }
+
+</script>
